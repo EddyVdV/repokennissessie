@@ -1,0 +1,12 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <bean id="petService" class="nl.ordina.petstore.services.PetService">
+        <property name="petDAO" ref="petDAO"/>
+    </bean>
+
+    <bean id="petDAO" class="nl.ordina.petstore.dao.PetDAO"/>
+
+</beans>
