@@ -7,6 +7,13 @@ import org.springframework.stereotype.Service;
 public class PetService {
   private PetDAO petDAO;
 
+  public PetService() {
+  }
+
+  public PetService(PetDAO petDAO) {
+    this.petDAO = petDAO;
+  }
+
   public PetDAO getPetDAO() {
     return petDAO;
   }

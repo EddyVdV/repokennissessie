@@ -3,6 +3,7 @@ package nl.ordina.petstore;
 import nl.ordina.petstore.repo.PetRepo;
 import nl.ordina.petstore.services.PetService;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Arrays;
@@ -29,5 +30,11 @@ public class App
                 new ClassPathXmlApplicationContext(new String[]{"Spring-Autoscan.xml"});
         String[] springManagedBeans = contextAutoscan.getBeanDefinitionNames();
         Arrays.stream(springManagedBeans).forEach(System.out::println);
+
+        // Lesson D
+        ApplicationContext contextConfiguration =
+                new AnnotationConfigApplicationContext(AppConfiguration.class);
+        String[] springManagedBeansConfig = contextConfiguration.getBeanDefinitionNames();
+        Arrays.stream(springManagedBeansConfig).forEach(System.out::println);
     }
 }
