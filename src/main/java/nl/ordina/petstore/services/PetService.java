@@ -1,7 +1,9 @@
 package nl.ordina.petstore.services;
 
 import nl.ordina.petstore.dao.PetDAO;
+import org.springframework.stereotype.Service;
 
+@Service
 public class PetService {
   private PetDAO petDAO;
 

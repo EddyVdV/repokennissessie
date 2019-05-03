@@ -23,5 +23,11 @@ public class App
                 new ClassPathXmlApplicationContext(new String[]{"Spring-Pet.xml"});
         String[] beans = context.getBeanDefinitionNames();
         Arrays.stream(beans).forEach(System.out::println);
+
+        // Lesson C
+        ApplicationContext contextAutoscan =
+                new ClassPathXmlApplicationContext(new String[]{"Spring-Autoscan.xml"});
+        String[] springManagedBeans = contextAutoscan.getBeanDefinitionNames();
+        Arrays.stream(springManagedBeans).forEach(System.out::println);
     }
 }
