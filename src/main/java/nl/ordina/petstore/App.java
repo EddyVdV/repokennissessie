@@ -1,5 +1,8 @@
 package nl.ordina.petstore;
 
+import nl.ordina.petstore.repo.PetRepo;
+import nl.ordina.petstore.services.PetService;
+
 /**
  * Hello world!
  *
