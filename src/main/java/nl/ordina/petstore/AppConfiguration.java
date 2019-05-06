@@ -9,8 +9,14 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfiguration {
 
   @Bean
+  public PetDAO petDAO()
+  {
+    return new PetDAO();
+  }
+
+  @Bean
   public PetService petService()
   {
-    return new PetService(new PetDAO());
+    return new PetService(petDAO());
   }
 }
